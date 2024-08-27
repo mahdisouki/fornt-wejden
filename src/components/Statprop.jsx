@@ -12,7 +12,7 @@ export default function Statistics() {
   useEffect(() => {
     const fetchUserCount = async () => {
       try {
-        const response = await axios.get('http://54.159.171.255:8800/api/users/count');
+        const response = await axios.get('http://54.158.208.20:8800/api/users/count');
         setUserCount(response.data.count); 
       } catch (error) {
         console.error('Error fetching user count:', error);
@@ -21,7 +21,7 @@ export default function Statistics() {
 
     const fetchMonthlyData = async () => {
       try {
-        const response = await axios.get('http://54.159.171.255:8800/api/users/monthly-count');
+        const response = await axios.get('http://54.158.208.20:8800/api/users/monthly-count');
         setMonthlyData(response.data); 
       } catch (error) {
         console.error('Error fetching monthly user count:', error);

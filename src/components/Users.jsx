@@ -48,7 +48,7 @@ export default function Users() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://54.159.171.255:8800/api/users");
+      const response = await axios.get("http://54.158.208.20:8800/api/users");
       setUsers(response.data);
     } catch (error) {
       console.error("There was an error ", error);
@@ -57,7 +57,7 @@ export default function Users() {
 
   const deleteUser = async (userId) => {
     try {
-      await axios.delete("http://54.159.171.255:8800/api/users/" + userId);
+      await axios.delete("http://54.158.208.20:8800/api/users/" + userId);
       fetchUsers();
     } catch (error) {
       console.log(error);
@@ -92,7 +92,7 @@ export default function Users() {
 
   const addUser = async () => {
     try {
-      await axios.post("http://54.159.171.255:8800/api/auth/register", newUser);
+      await axios.post("http://54.158.208.20:8800/api/auth/register", newUser);
       fetchUsers();
       handleCloseAdd();
     } catch (error) {
@@ -103,7 +103,7 @@ export default function Users() {
   const updateUser = async () => {
     try {
       await axios.put(
-        `http://54.159.171.255:8800/api/users/${editUser._id}`,
+        `http://54.158.208.20:8800/api/users/${editUser._id}`,
         editUser
       );
       fetchUsers();

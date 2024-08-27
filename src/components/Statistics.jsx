@@ -26,7 +26,7 @@ export default function Statistics() {
   const chartRef = useRef(null);
 
   useEffect(() => {
-    axios.get('http://54.159.171.255:8800/api/parks/count')
+    axios.get('http://54.158.208.20:8800/api/parks/count')
       .then(response => {
         setParkingsCount(response.data.count);
       })
@@ -34,7 +34,7 @@ export default function Statistics() {
         console.error('There was an error fetching the parking count!', error);
       });
 
-    axios.get('http://54.159.171.255:8800/api/reservations/count')
+    axios.get('http://54.158.208.20:8800/api/reservations/count')
       .then(response => {
         setReservationsCount(response.data.count);
       })
@@ -42,7 +42,7 @@ export default function Statistics() {
         console.error('There was an error fetching the reservations count!', error);
       });
 
-    axios.get('http://54.159.171.255:8800/api/reservations/monthly-count')
+    axios.get('http://54.158.208.20:8800/api/reservations/monthly-count')
       .then(response => {
         setReservationStats(response.data);
       })
@@ -50,7 +50,7 @@ export default function Statistics() {
         console.error('There was an error fetching the reservation stats!', error);
       });
 
-    axios.get('http://54.159.171.255:8800/api/users/count')
+    axios.get('http://54.158.208.20:8800/api/users/count')
       .then(response => {
         setUsersCount(response.data.count);
       })

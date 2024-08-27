@@ -50,7 +50,7 @@ import {
   
     const fetchParkings = async () => {
       try {
-        const response = await axios.get("http://54.159.171.255:8800/api/parks");
+        const response = await axios.get("http://54.158.208.20:8800/api/parks");
         setParkings(response.data);
       } catch (error) {
         console.error("There was an error ", error);
@@ -59,7 +59,7 @@ import {
   
     const deleteParkings = async (parkingId) => {
       try {
-        await axios.delete(`http://54.159.171.255:8800/api/parks/${parkingId}`);
+        await axios.delete(`http://54.158.208.20:8800/api/parks/${parkingId}`);
         fetchParkings();
       } catch (error) {
         console.log(error);
@@ -109,7 +109,7 @@ import {
   
     const addParking = async () => {
       try {
-        await axios.post("http://54.159.171.255:8800/api/parks", newParking);
+        await axios.post("http://54.158.208.20:8800/api/parks", newParking);
         fetchParkings();
         handleCloseAdd();
       } catch (error) {
@@ -119,7 +119,7 @@ import {
   
     const updateParking = async () => {
       try {
-        await axios.put(`http://54.159.171.255:8800/api/parks/${editParking._id}`, editParking);
+        await axios.put(`http://54.158.208.20:8800/api/parks/${editParking._id}`, editParking);
         fetchParkings();
         handleCloseEdit();
       } catch (error) {

@@ -18,7 +18,7 @@ export default function Reservations() {
   React.useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await axios.get("http://54.159.171.255:8800/api/reservations");
+        const response = await axios.get("http://54.158.208.20:8800/api/reservations");
         setReservations(response.data);
       } catch (error) {
         console.error("Error fetching reservations:", error);
@@ -30,7 +30,7 @@ export default function Reservations() {
 
   const handleCancelReservation = async (reservationId) => {
     try {
-      await axios.put(`http://54.159.171.255:8800/api/reservations/${reservationId}/cancel`);
+      await axios.put(`http://54.158.208.20:8800/api/reservations/${reservationId}/cancel`);
       setReservations(
         reservations.map((reservation) =>
           reservation._id === reservationId

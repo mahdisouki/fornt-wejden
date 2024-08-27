@@ -75,7 +75,7 @@ function Login() {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://54.159.171.255:8800/api/auth/login/proprietere', {
+      const response = await axios.post('http://54.158.208.20:8800/api/auth/login/proprietere', {
         email: email,
         password: password,
       });

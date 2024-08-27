@@ -66,7 +66,7 @@ function RegisterProprietaire() {
   const handleRegister = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://54.159.171.255:8800/api/auth/proprietere/register', {
+      await axios.post('http://54.158.208.20:8800/api/auth/proprietere/register', {
            fullname: fullname,
             email: email,
             password: password,
